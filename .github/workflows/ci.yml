@@ -35,6 +35,9 @@ jobs:
 
     - name: Docker build
       run: docker build -t hizrali/go_sample:0.1 .
+
+    - name: List Docker images
+      run: docker images
     
     - name: ls
       run: ls -la

@@ -38,6 +38,3 @@ jobs:
 
     - name: List Docker images
       run: docker images
-    
-    - name: ls
-      run: ls -la

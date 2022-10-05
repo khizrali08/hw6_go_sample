@@ -13,7 +13,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: ls
+      run: ls -la
     - uses: actions/checkout@v3
+    - name: ls
+      run: ls -la
 
     - name: Set up Go
       uses: actions/setup-go@v3
@@ -28,3 +32,9 @@ jobs:
 
     - name: Run test
       run: go test -v ./...
+
+    - name: Docker build
+      run: docker build -t hizrali/go_sample:0.1
+    
+    - name: ls
+      run: ls -la

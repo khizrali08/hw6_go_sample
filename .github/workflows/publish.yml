@@ -41,11 +41,11 @@ jobs:
       run: go mod download
 
     - name: Build
-      if: github.event.inputs.skip-build == false
+      if: github.event.inputs.skip-build == 'false'
       run: go build -v ./...
 
     - name: Run test
-      if: github.event.inputs.skip-test == false
+      if: github.event.inputs.skip-test == 'false'
       run: go test -v ./...
 
     - name: Login to DockerHub

@@ -42,11 +42,11 @@ jobs:
 
     - name: Build      
       run: go build -v ./...
-      if: ${{ github.event.inputs.skip-build }} == true
+      if: ${{ github.event.inputs.skip-build }} == false
 
     - name: Run test      
       run: go test -v ./...
-      if: ${{ github.event.inputs.skip-test }} == true
+      if: ${{ github.event.inputs.skip-test }} == false
 
 #    - name: Docker build
 #      run: docker build -t hizrali/go_sample:0.1 .

@@ -40,13 +40,13 @@ jobs:
     - name: Fetch modules for go
       run: go mod download
 
-    - name: Build
-      if: ${{ github.event.inputs.skip-build }} == false
+    - name: Build      
       run: go build -v ./...
+      if: ${{ github.event.inputs.skip-build }} == true
 
-    - name: Run test
-      if: ${{ github.event.inputs.skip-test }} == false
+    - name: Run test      
       run: go test -v ./...
+      if: ${{ github.event.inputs.skip-test }} == true
 
 #    - name: Docker build
 #      run: docker build -t hizrali/go_sample:0.1 .

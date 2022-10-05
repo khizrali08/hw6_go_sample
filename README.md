@@ -1,5 +1,5 @@
 # Status of last deployment:<br>
-<img src="https://github.com/khizrali08/hw6_go_sample/workflows/CI/badge.svg?branch=master"><br>
+<img src="https://github.com/khizrali08/hw6_go_sample/workflows/CI/badge.svg?branch=main"><br>
 
 # go_sample
 

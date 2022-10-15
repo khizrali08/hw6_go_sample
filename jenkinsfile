@@ -29,7 +29,9 @@ pipeline {
             }
         }
         stage ('Test') {
-            echo 'Hello World from Test'
+            steps {
+                echo 'Hello World from Test'
+            }            
         }
     }
 }

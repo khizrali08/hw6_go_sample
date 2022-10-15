@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                sh 'uname -a'
+
+                dir('..') {
+                    sh 'pwd'
+                    sh 'ls'
+                }
+            }
+        }
+    }
+}

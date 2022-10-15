@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        A=B
+    }
+
     stages {
         stage('Hello') {
             steps {
